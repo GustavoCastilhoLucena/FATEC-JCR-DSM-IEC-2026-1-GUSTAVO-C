@@ -1,0 +1,20 @@
+# Nome do Workflow (aparecerá na aba actions)
+name: CI Simples
+
+# Eventos que disparam o workflow:
+# Push - ( Quando algo é commitado )
+# Pull_request - ( Quando algo é PR )
+on:
+  push: 
+    branches: [ dev ] # Dispara somente quando há um push na branch dev
+  pull_request: 
+    branches: [ dev ] # Dispara somente quando um pull request é efetuado para dev
+
+jobs:
+  # Definido um job chamado build
+  build:
+    runs-on: ubuntu-latest # Ambiente que o Linux usa (máquina Linux)
+    steps:
+      # 1. Baixar o código do repositório
+    - name: Teste de Funcionamento
+      uses: action/checkout@v4
