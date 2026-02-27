@@ -16,5 +16,7 @@ jobs:
     runs-on: ubuntu-latest # Ambiente que o Linux usa (máquina Linux)
     steps:
       # 1. Baixar o código do repositório
-    - name: Teste de Funcionamento
+    - name: Checkout do repositório
       uses: actions/checkout@v4
+    - name: Teste de Funcionamento
+      run: echo "CI funcionando no projeto INPE!"
